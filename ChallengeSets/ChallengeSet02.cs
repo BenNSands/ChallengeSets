@@ -7,17 +7,29 @@ namespace ChallengeSets
     {
         public bool CharacterIsALetter(char c)
         {
+            //if (c.ToLower == )
+            //{
+
+            //}
             throw new NotImplementedException();
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
+            
             throw new NotImplementedException();
         }
 
         public bool IsNumberEven(int number)
         {
-            throw new NotImplementedException();
+            if (number % 2 == 0)
+            {
+                return true;
+            }
+            else {
+                return false;
+                 }
+                    //throw new NotImplementedException();
         }
 
         public bool IsNumberOdd(int num)
