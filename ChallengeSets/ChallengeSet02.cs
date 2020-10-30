@@ -7,10 +7,7 @@ namespace ChallengeSets
     {
         public bool CharacterIsALetter(char c)
         {
-            //if (c.ToLower == )
-            //{
-
-            //}
+            
             throw new NotImplementedException();
         }
 
@@ -65,7 +62,13 @@ namespace ChallengeSets
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            var ans = 0;
+            foreach(var x in numbers)
+            {
+                ans = ans + numbers[x];
+            }
+            return ans;
+            //throw new NotImplementedException();
         }
 
         public int SumEvens(int[] numbers)
