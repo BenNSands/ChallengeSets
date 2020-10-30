@@ -63,9 +63,13 @@ namespace ChallengeSets
         public int Sum(int[] numbers)
         {
             var ans = 0;
-            foreach(var x in numbers)
+            if (numbers == null)
             {
-                ans = ans + numbers[x];
+                return 0;
+            }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                ans = ans + numbers[i];
             }
             return ans;
             //throw new NotImplementedException();
