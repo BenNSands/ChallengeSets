@@ -7,7 +7,7 @@ namespace ChallengeSets
     {
         public bool CharacterIsALetter(char c)
         {
-            
+            return Char.IsLetter(c);
             throw new NotImplementedException();
         }
 
