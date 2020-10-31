@@ -53,14 +53,17 @@ namespace ChallengeSets
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
+
             if (numbers.Count() == 0 )
             {
                 return 0;
             }
-            else if(numbers == null)
-            {
-                return 0;
-            }
+
+
             else
             {
                 return numbers.Max() + numbers.Min();
