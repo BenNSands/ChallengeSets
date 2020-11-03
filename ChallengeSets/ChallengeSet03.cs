@@ -101,7 +101,7 @@ namespace ChallengeSets
         {
             var ans = val.Length - 1;
             return val[ans];
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
@@ -111,12 +111,16 @@ namespace ChallengeSets
                 return 0;
             }
             return dividend / divisor;
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            var last = nums.Length - 1;
+
+            var ans = nums[last] - nums[0];
+            return ans;
+            //throw new NotImplementedException();
         }
         public int[] GetOddsBelow100()
         {
