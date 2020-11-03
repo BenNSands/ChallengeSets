@@ -99,7 +99,8 @@ namespace ChallengeSets
 
         public char GetLastLetterOfString(string val)
         {
-
+            var ans = val.Length - 1;
+            return val[ans];
             throw new NotImplementedException();
         }
 
