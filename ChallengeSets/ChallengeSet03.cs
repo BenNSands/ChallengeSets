@@ -93,7 +93,8 @@ namespace ChallengeSets
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[0];
+            //throw new NotImplementedException();
         }
 
         public char GetLastLetterOfString(string val)
