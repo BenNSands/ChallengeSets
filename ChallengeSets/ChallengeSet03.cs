@@ -132,26 +132,7 @@ namespace ChallengeSets
             }
             return list.ToArray();
 
-            //int theBigUn = 100;
-            //var oddsBelow100 = new int[50];
 
-            //for (int i = 0; i < oddsBelow100.Length; i++)
-            //{
-            //    if (theBigUn > 0)
-            //    {
-            //        if (theBigUn % 2 == 0)
-            //        {
-            //            --theBigUn;
-            //            oddsBelow100[i] = theBigUn;
-            //        }
-            //        else
-            //        {
-            //            oddsBelow100[i] = theBigUn;
-            //            theBigUn--;
-            //        }
-            //    }
-               
-            //}
 
 
            
@@ -160,9 +141,10 @@ namespace ChallengeSets
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            foreach (var str in words)
+
+            for(int i = 0; i < words.Length; i++)
             {
-                str.ToUpper();
+               words[i] = words[i].ToUpper();
             }
             //throw new NotImplementedException();
         }
