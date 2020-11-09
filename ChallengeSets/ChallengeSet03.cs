@@ -124,37 +124,45 @@ namespace ChallengeSets
         }
         public int[] GetOddsBelow100()
         {
-            int theBigUn = 100;
-            var oddsBelow100 = new int[50];
+            var list = new List<int>();
 
-            for (int i = 0; i < oddsBelow100.Length; i++)
+            for (int i = 1; i < 100; i+=2)
             {
-                if (theBigUn > 0)
-                {
-                    if (theBigUn % 2 == 0)
-                    {
-                        --theBigUn;
-                        oddsBelow100[i] = theBigUn;
-                    }
-                    else
-                    {
-                        oddsBelow100[i] = theBigUn;
-                        theBigUn--;
-                    }
-                }
-               
+                list.Add(i);
             }
+            return list.ToArray();
+
+            //int theBigUn = 100;
+            //var oddsBelow100 = new int[50];
+
+            //for (int i = 0; i < oddsBelow100.Length; i++)
+            //{
+            //    if (theBigUn > 0)
+            //    {
+            //        if (theBigUn % 2 == 0)
+            //        {
+            //            --theBigUn;
+            //            oddsBelow100[i] = theBigUn;
+            //        }
+            //        else
+            //        {
+            //            oddsBelow100[i] = theBigUn;
+            //            theBigUn--;
+            //        }
+            //    }
+               
+            //}
 
 
-            return oddsBelow100;
+           
            // throw new NotImplementedException();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            foreach (var word in words)
+            foreach (var str in words)
             {
-                word.ToUpper();
+                str.ToUpper();
             }
             //throw new NotImplementedException();
         }
