@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace ChallengeSets
 {
     public class ChallengeSet04
@@ -24,7 +26,15 @@ namespace ChallengeSets
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            var arrOfStr = new string[] { str1, str2, str3, str4 };
+            string smallStr = arrOfStr[0];
+
+            foreach (var word in arrOfStr)
+            {
+
+            }
+            return smallStr;
+            //throw new NotImplementedException();
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
