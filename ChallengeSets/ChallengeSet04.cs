@@ -38,6 +38,9 @@ namespace ChallengeSets
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
+            var arrOfNum = new int[] { number1, number2, number3, number4 };
+            int ans = arrOfNum.Min();
+            return ans;
             throw new NotImplementedException();
         }
 
