@@ -73,11 +73,27 @@ namespace ChallengeSets
             {
                 return false;
             }
-            throw new NotImplementedException();
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
+            var nullCount = 0;
+            var majority = objs.Length / 2;
+            foreach (var ob in objs)
+            {
+                if (ob == null)
+                {
+                    nullCount += 1;
+                }
+            }
+            if (nullCount > majority)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
             throw new NotImplementedException();
         }
 
