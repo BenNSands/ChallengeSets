@@ -46,6 +46,7 @@ namespace ChallengeSets
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
+            biz.Name = "TrueCoders";
             throw new NotImplementedException();
         }
 
@@ -56,6 +57,22 @@ namespace ChallengeSets
 
         public bool IsStringANumber(string input)
         {
+            int num = 0;
+            double dub = 0;
+            bool isNum = int.TryParse(input, out num);
+            bool isDouble = double.TryParse(input, out dub);
+            if (isNum == true)
+            {
+                return true;
+            }
+            else if (isDouble == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
             throw new NotImplementedException();
         }
 
