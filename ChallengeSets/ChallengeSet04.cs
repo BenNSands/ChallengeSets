@@ -22,7 +22,7 @@ namespace ChallengeSets
                 }
             }
             return ans;
-            //throw new NotImplementedException();
+          
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
@@ -33,7 +33,6 @@ namespace ChallengeSets
             return shortestStr.Length;
             
 
-            //throw new NotImplementedException();
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
@@ -41,13 +40,12 @@ namespace ChallengeSets
             var arrOfNum = new int[] { number1, number2, number3, number4 };
             int ans = arrOfNum.Min();
             return ans;
-            throw new NotImplementedException();
+           
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
             biz.Name = "TrueCoders";
-            throw new NotImplementedException();
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
@@ -94,17 +92,54 @@ namespace ChallengeSets
             {
                 return false;
             }
-            throw new NotImplementedException();
+
         }
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            double numOfEvens = 0;
+            double evenTotal = 0;
+
+            if (numbers == null)
+            {
+                return 0;
+            }
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    numOfEvens += 1;
+                    evenTotal += num;
+                }
+            }
+            if (numOfEvens > 0)
+            {
+              return evenTotal / numOfEvens;
+            }
+            else
+            {
+                return 0;
+            }
+            
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            var num = 1;
+            try
+            {
+                for (int i = number; i > 0; i--)
+                {
+                    num = num * i;
+                }
+                return num;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+
+                throw;
+            }
+
         }
     }
 }
