@@ -58,8 +58,14 @@ namespace ChallengeSets
                     return false;
                 }
             }
-
-            throw new NotImplementedException();
+            if (triArr[0] + triArr[1] > triArr[2] && triArr[0] + triArr[2] > triArr[1] && triArr[1] + triArr[2] > triArr[0])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool IsStringANumber(string input)
