@@ -50,6 +50,15 @@ namespace ChallengeSets
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
+            var triArr = new int[] { sideLength1, sideLength2, sideLength3 };
+            foreach (var side in triArr)
+            {
+                if (side <= 0)
+                {
+                    return false;
+                }
+            }
+
             throw new NotImplementedException();
         }
 
@@ -125,21 +134,16 @@ namespace ChallengeSets
 
         public int Factorial(int number)
         {
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();   
+            }
             var num = 1;
-            try
+            for (int i = number; i > 0; i--)
             {
-                for (int i = number; i > 0; i--)
-                {
-                    num = num * i;
-                }
-                return num;
+                num = num * i;
             }
-            catch (ArgumentOutOfRangeException)
-            {
-
-                throw;
-            }
-
+            return num;
         }
     }
 }
