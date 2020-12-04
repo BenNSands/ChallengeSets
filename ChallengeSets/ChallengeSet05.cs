@@ -79,7 +79,6 @@ namespace ChallengeSets
             }
 
             return ans;
-           // throw new NotImplementedException();
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
@@ -99,7 +98,6 @@ namespace ChallengeSets
             }
            var arr =  ans.ToArray();
             return arr;
-            throw new NotImplementedException();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
@@ -119,7 +117,6 @@ namespace ChallengeSets
                 }
             }
             return ans;
-            //throw new NotImplementedException();
         }
     }
 }

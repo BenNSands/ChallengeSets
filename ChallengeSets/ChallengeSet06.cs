@@ -36,7 +36,7 @@ namespace ChallengeSets
             }
                 return true;
             
-            throw new NotImplementedException();
+
         }
 
         public int IndexOfLastUniqueLetter(string str)
@@ -51,7 +51,24 @@ namespace ChallengeSets
 
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
-            throw new NotImplementedException();
+            var ifNull = new double[] { };
+            if (elements == null || n < 0)
+            {
+                return ifNull;
+            }
+
+            var ans = new List<double>();
+
+            foreach (var num in elements)
+            {
+                if (num % n == 0)
+                {
+                    ans.Add(num);
+                }
+            }
+            var arr = ans.ToArray();
+            return arr;
+            //throw new NotImplementedException();
         }
     }
 }
