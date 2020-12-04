@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -23,7 +24,25 @@ namespace ChallengeSets
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+            else if (numbers.Length == 0)
+            {
+                return false;
+            }
+            var ans = true;
+            var check = numbers.OrderBy(num => num).ToArray();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] != check[i])
+                {
+                    ans = false;
+                }
+            }
+            return ans;
+            //throw new NotImplementedException();
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
@@ -33,7 +52,13 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            var ans = "";
+            foreach (var word in words)
+            {
+                ans = ans + " " + word;
+            }
+            return ans;
+            //throw new NotImplementedException();
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
