@@ -14,7 +14,6 @@ namespace ChallengeSets
                 ++ans;
             } while (ans % n != 0);
             return ans;
-            //throw new NotImplementedException();
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
@@ -52,7 +51,20 @@ namespace ChallengeSets
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            var ans = 0;
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i - 1] % 2 == 0)
+                {
+                    ans += numbers[i];
+                }
+            }
+            return ans;
+            //throw new NotImplementedException();
         }
 
         public string TurnWordsIntoSentence(string[] words)
