@@ -8,7 +8,13 @@ namespace ChallengeSets
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            var ans = startNumber;
+            do
+            {
+                ++ans;
+            } while (ans % n != 0);
+            return ans;
+            //throw new NotImplementedException();
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
@@ -42,7 +48,6 @@ namespace ChallengeSets
                 }
             }
             return ans;
-            //throw new NotImplementedException();
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
@@ -52,13 +57,8 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            var ans = "";
-            foreach (var word in words)
-            {
-                ans = ans + " " + word;
-            }
-            return ans;
-            //throw new NotImplementedException();
+
+            throw new NotImplementedException();
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
