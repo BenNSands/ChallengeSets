@@ -69,11 +69,15 @@ namespace ChallengeSets
         public string TurnWordsIntoSentence(string[] words)
         {
             string ans = "";
+            if (words == null || words.Length == 0)
+            {
+                return ans;
+            }
             foreach (var word in words)
             {
                 ans = ans + " " + word;
             }
-            ans = ans + ".";
+
             return ans;
            // throw new NotImplementedException();
         }

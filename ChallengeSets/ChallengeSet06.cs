@@ -12,6 +12,30 @@ namespace ChallengeSets
 
         public bool IsPrimeNumber(int num)
         {
+            if (num <= 0)
+            {
+                return false;
+            }
+            if (num == 1) 
+            { 
+                return false; 
+            }
+            if (num == 2) 
+            {
+                return true;
+            }
+
+            var limit = Math.Ceiling(Math.Sqrt(num));
+
+            for (int i = 2; i <= limit; ++i)
+            {
+                if (num % i == 0)
+                {
+                    return false;
+                }
+            }
+                return true;
+            
             throw new NotImplementedException();
         }
 
