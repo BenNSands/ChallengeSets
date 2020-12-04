@@ -64,17 +64,37 @@ namespace ChallengeSets
                 }
             }
             return ans;
-            //throw new NotImplementedException();
         }
 
         public string TurnWordsIntoSentence(string[] words)
         {
-
-            throw new NotImplementedException();
+            string ans = "";
+            foreach (var word in words)
+            {
+                ans = ans + " " + word;
+            }
+            ans = ans + ".";
+            return ans;
+           // throw new NotImplementedException();
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
+            var ifNull = new double[] { };
+            if (elements == null)
+            {
+                return ifNull;
+            }
+            var ans = new List<double>();
+            foreach (var num in elements)
+            {
+                if (num % 4 == 0)
+                {
+                    ans.Add(num);
+                }
+            }
+           var arr =  ans.ToArray();
+            return arr;
             throw new NotImplementedException();
         }
 
