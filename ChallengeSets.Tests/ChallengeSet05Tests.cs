@@ -129,6 +129,7 @@ namespace ChallengeSets.Tests
         [InlineData(new string[] { " ", " " }, "")]
         [InlineData(new string[] { }, "")]
         [InlineData(null, "")]
+        [InlineData(new string[] { " ", " ", " "}, "")]
         public void TurnWordsIntoSentence(string[] words, string expected)
         {
             // Arrange

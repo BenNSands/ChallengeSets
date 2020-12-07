@@ -68,8 +68,25 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            var ans = words.Aggregate((current, next) => current + " " + next + ".");
-            return ans;
+            var ans = "";
+            if (words == null || words.Length == 0)
+            {
+                return "";
+            }
+            foreach (var word in words)
+            {
+                string trimStr = String.Concat(word.Where(c => !Char.IsWhiteSpace(c)));
+                if (trimStr != "")
+                {
+                    ans += trimStr + " ";
+                }
+            }
+            if (ans == "")
+            {
+                return ans;
+            }
+            return ans.Trim() + '.';
+
         }
 
         public double[] GetEveryFourthElement(List<double> elements)

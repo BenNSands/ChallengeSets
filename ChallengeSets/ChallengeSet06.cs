@@ -9,22 +9,24 @@ namespace ChallengeSets
         {
             var ans = false;
 
-            var newList = new List<string>();
+            if (words == null)
+            {
+                return false;
+            }
 
             if (ignoreCase == true)
             {
-                word = word.ToLower();
+
                 foreach (var item in words)
                 {
-                    newList.Add(item.ToLower());
-                }
-
-                foreach (var item in newList)
-                {
-                    if (word == item)
+                    if (item != null)
                     {
-                        ans = true;
+                        if (word.ToLower() == item.ToLower())
+                        {
+                            ans = true;
+                        }
                     }
+                   
                 }
             }
 
