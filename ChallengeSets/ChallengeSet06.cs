@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -76,12 +77,68 @@ namespace ChallengeSets
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            throw new NotImplementedException();
+            var counter = 0;
+            var ans = 0;
+            if (str.Length == 1)
+            {
+                return 0;
+            }
+            if (str == "")
+            {
+                return -1;
+            }
+            var count = new int[str.Length];
+            for (int i = 0; i < str.Length; i++)
+            {
+                foreach (var lett in str)
+                {
+                    if (str[i] == lett)
+                    {
+                        count[i]++;
+                    }
+                }
+            }
+            for (int i = 0; i < count.Length; i++)
+            {
+                if (count[i] == 1)
+                {
+                    ans = i;
+                }
+                else if(count[i] > 1)
+                {
+                    counter++;
+                }
+            }
+            if (counter == str.Length)
+            {
+                return -1;
+            }
+            return ans;
         }
 
         public int MaxConsecutiveCount(int[] numbers)
         {
-            throw new NotImplementedException();
+            var ans = 0;
+
+            
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                var maybeAns = 0;
+                for (int j = i + 1; i < numbers.Length - 1; i++)
+                {
+                    if (numbers[i] == numbers[j])
+                    {
+                        maybeAns++;
+                    }
+
+                }
+                if (maybeAns > ans)
+                {
+                    ans = maybeAns;
+                }
+            }
+            return ans;
+            //throw new NotImplementedException();
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)
