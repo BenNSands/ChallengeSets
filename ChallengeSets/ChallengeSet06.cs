@@ -119,26 +119,23 @@ namespace ChallengeSets
         public int MaxConsecutiveCount(int[] numbers)
         {
             var ans = 0;
-
-            
             for (int i = 0; i < numbers.Length; i++)
             {
-                var maybeAns = 0;
-                for (int j = i + 1; i < numbers.Length - 1; i++)
+                var curCount = 1;
+                for (int j = i + 1; j < numbers.Length; j++)
                 {
-                    if (numbers[i] == numbers[j])
-                    {
-                        maybeAns++;
-                    }
-
+                    if (numbers[i] != numbers[j])
+                        break;
+                        curCount++;
+                    
+                    
                 }
-                if (maybeAns > ans)
+                if (curCount > ans)
                 {
-                    ans = maybeAns;
+                    ans = curCount;
                 }
             }
             return ans;
-            //throw new NotImplementedException();
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)
