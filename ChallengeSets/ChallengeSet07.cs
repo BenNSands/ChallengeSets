@@ -25,7 +25,28 @@ namespace ChallengeSets
 
         public string GetCommaSeparatedListOfProfitableBusinesses(List<Business> businesses)
         {
-            throw new NotImplementedException();
+            var ansList = new List<string>();
+            var ansStr = "";
+            var ans = "";
+            foreach (var biz in businesses)
+            {
+                if (biz.TotalRevenue > biz.TotalExpenses)
+                {
+                    ansList.Add(biz.Name.ToString());
+                }
+            }
+            foreach (var profitable in ansList)
+            {
+                ansStr += profitable + ",";
+            }
+            for (int i = 0; i < ansStr.Length -1; i++)
+            {
+                ans += ansStr[i];
+            }
+
+            
+            return ans;
+            //throw new NotImplementedException();
         }
 
         public string GetNameOfHighestParentCompany(Business business)
