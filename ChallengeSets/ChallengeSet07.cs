@@ -236,12 +236,34 @@ namespace ChallengeSets
                 return TicTacToeResult.Draw;
             }
 
-            //throw new NotImplementedException();
         }
 
         public bool EachArrayInJaggedArrayContainsTargetNumber(int[][] numbers, int targetNumber)
         {
-            throw new NotImplementedException();
+            if (numbers.Length == 0)
+            {
+                return false;
+            }
+            var count = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                foreach (var num in numbers[i])
+                {
+                    if (num == targetNumber)
+                    {
+                        count++;
+                        break;
+                    }
+                }
+            }
+            if (count == numbers.Length)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
