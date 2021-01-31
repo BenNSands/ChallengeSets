@@ -49,6 +49,7 @@ namespace ChallengeSets
 
         public string GetNameOfHighestParentCompany(Business business)
         {
+            // If there is Company A, whose parent is Company B, whose parent is Company C, then given Company A return Company C
             if (business.ParentCompany == null)
             {
                 return business.Name;
@@ -67,15 +68,11 @@ namespace ChallengeSets
             var lastIndex = arr.Length - 1;
             var ans = arr[lastIndex].Name;
             return ans;
-
-            // If there is Company A, whose parent is Company B, whose parent is Company C, then given Company A return Company C
-            //throw new NotImplementedException();
         }
 
         public enum TicTacToeResult { X, O, Draw }
         public TicTacToeResult GetTicTacToeWinner(char[,] finalBoard)
         {
-            TicTacToeResult ans;
             //determining placement
             var x11 = false;
             var o11 = false;
