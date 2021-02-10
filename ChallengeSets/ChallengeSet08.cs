@@ -94,6 +94,7 @@ namespace ChallengeSets
 
             var midPath = 0;
             var diff = 0;
+            //checks if mid path connects on first entry
             if (ent2 == 10)
             {
                 if (ent > pos)
@@ -129,6 +130,7 @@ namespace ChallengeSets
                     ans = Frogger.N;
                 }
             }
+            //checks if mid path connects on second entry
             if (ent2 != 10)
             {
                 if (ent2 > pos)
@@ -165,14 +167,6 @@ namespace ChallengeSets
                 }
             }
             return ans;
-
-
-
-
-
-
-
-            throw new NotImplementedException();
         }
     }
 }
